@@ -1,0 +1,37 @@
+# Este workflow é para um projeto Java puro
+# O objetivo é apenas compilar o código para checar por erros de sintaxe.
+
+name: Java CI - Compile Check ( continous integration)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      #  Faz checkout do código
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      #  Configura o Java 21
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      #  Compila o projeto Java puro
+      - name: Compile project
+        run: |
+         
+          # Cria um diretório para os arquivos .class compilados
+          mkdir out
+          
+          # Encontra todos os arquivos .java e compila eles
+          # O -d out diz ao javac para colocar os .class dentro da pasta 'out'
+          find . -name "*.java" | xargs javac -d out
