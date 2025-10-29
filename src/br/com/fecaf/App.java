@@ -1,4 +1,6 @@
-public class Main {
+package br.com.fecaf;
+
+public class App {
     public static void main(String[] args) {
         System.out.println("ola mundo");
     }

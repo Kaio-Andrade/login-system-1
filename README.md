@@ -44,4 +44,4 @@ Durante o desenvolvimento, simulamos uma alteração de requisito (Mudança de E
     git clone [INSERIR LINK DO SEU REPOSITÓRIO]
     ```
 2.  **Estrutura:** Garanta que a estrutura de diretórios (`/src`, `/tests`, `/database`) esteja correta.
-3.  **Execução:** O projeto é executado a partir do método `main` da classe `App.java`.
+3.  **Execução:** O projeto é executado a partir do método `main` da classe `br.com.fecaf.App.java`.
