@@ -6,6 +6,10 @@ public class CadastrarUsuario {
 
         Scanner scanner = new Scanner(System.in);
 
+   // Metodo responsável por solicitar ao usuário as informações necessárias.
+    // para o cadastro: nome, senha e e-mail.
+    //Após a coleta, as informações são armazenadas em um array de
+
         public String[] cadastrar(){
             System.out.println("Informe seu nome:");
             String nome = scanner.nextLine();
