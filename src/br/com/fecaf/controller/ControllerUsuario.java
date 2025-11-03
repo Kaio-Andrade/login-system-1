@@ -103,4 +103,19 @@ public class ControllerUsuario {
 
 
     }
+    public boolean procurarUsuario(ArrayList<Usuario> usuarios, String nome, String senha) {
+
+        // Itera sobre cada objeto Usuario na lista fornecida.
+        for(Usuario usuario : usuarios) {
+
+            // Verifica se o nome E a senha do usuário atual correspondem aos dados de entrada.
+            if (usuario.getNome().equals(nome) && usuario.getSenha().equals(senha)) {
+
+                // Se as credenciais coincidirem, retorna sucesso imediatamente.
+                return true;
+            }
+        }
+        // Se o loop terminar sem encontrar correspondência, retorna falha.
+        return false;
+    }
 }
