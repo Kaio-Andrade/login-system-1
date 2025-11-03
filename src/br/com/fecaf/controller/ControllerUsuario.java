@@ -6,6 +6,7 @@ import br.com.fecaf.view.CadastrarUsuario;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 public class ControllerUsuario {
 
@@ -39,7 +40,37 @@ public class ControllerUsuario {
 
         // Fecha o fluxo de escrita, liberando recursos.
         oos.close();
-
-
     }
+
+
+    public static String[] listarArquivosSer(String caminhoDiretorio) {
+
+        //Cria um objeto File representando o diretório.
+        File dir = new File(caminhoDiretorio);
+
+        // Lista dinâmica para armazenar os nomes dos arquivos .ser
+        ArrayList<String> arquivosSer = new ArrayList<>();
+
+        //Verifica se o caminho fornecido é de fato um diretório.
+        if (dir.isDirectory()) {
+            File[] arquivos = dir.listFiles();
+
+            // Verifica se a lista de arquivos não é nula
+            if (arquivos != null) {
+
+                //Itera sobre cada item encontrado no diretório
+                for (File f : arquivos) {
+
+                    //Filtra: verifica se é um arquivo e se termina com ".ser"
+                    if (f.isFile() && f.getName().endsWith(".ser")) {
+                        arquivosSer.add(f.getName());
+                    }
+                }
+            }
+        }
+
+        return arquivosSer.toArray(new String[0]); // converte ArrayList para array
+    }
+
+
 }
