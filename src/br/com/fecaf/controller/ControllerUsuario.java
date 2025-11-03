@@ -3,9 +3,7 @@ package br.com.fecaf.controller;
 import br.com.fecaf.model.Usuario;
 import br.com.fecaf.view.CadastrarUsuario;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ControllerUsuario {
@@ -72,5 +70,37 @@ public class ControllerUsuario {
         return arquivosSer.toArray(new String[0]); // converte ArrayList para array
     }
 
+    public ArrayList<Usuario> carregarUsuario() throws Exception {
 
+       // Obtém a lista de nomes dos arquivos .ser (usuários salvos) do diretório "database"
+        String[] usuariosSer = listarArquivosSer("database");
+
+        // Inicializa a lista que armazenará os objetos Usuario desserializados.
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+
+        //  Itera sobre cada nome de arquivo .ser encontrado.
+        for(String usuario : usuariosSer) {
+            // Desserializar (arquivo -> objeto)
+
+            //  Configura o fluxo de entrada de bytes para o arquivo.
+            FileInputStream fis = new FileInputStream("database//" + usuario);
+
+            //  Configura o fluxo de objetos para ler o objeto do fluxo de bytes.
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+
+            // Lê (desserializa) o objeto e faz o casting para a classe Usuario.
+            Usuario pessoa = (Usuario) ois.readObject();
+
+            // . Adiciona o objeto carregado à lista.
+            usuarios.add(pessoa);
+
+            //  Fecha o fluxo de leitura, liberando recursos.
+            ois.close();
+        }
+        //  Retorna a lista completa de usuários.
+        return usuarios;
+
+
+    }
 }
