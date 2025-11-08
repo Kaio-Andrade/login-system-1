@@ -19,7 +19,9 @@ public class ControllerUsuario {
 
 
         // Serializar (objeto -> arquivo)
-        String nomeArquivo = pessoa.getNome().replace(" ", "_").toLowerCase();
+        // mudança de escopo, criando índice unico para usuario para evitar sobreescrever usuario, caso tenha 2 usuarios com o mesmo nome.
+        int numUsuario = listarArquivosSer("database").length + 1;
+        String nomeArquivo = numUsuario +"_" + pessoa.getNome().replace(" ", "_").toLowerCase();
         File pasta = new File("database");
         if (!pasta.exists()) {
             pasta.mkdirs();
