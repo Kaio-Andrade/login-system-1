@@ -40,8 +40,8 @@ Durante o desenvolvimento, simulamos uma alteração de requisito (Mudança de E
 ##  4. Como Executar o Projeto
 
 1.  **Clone o Repositório:**
-    ```bash
-    git clone [INSERIR LINK DO SEU REPOSITÓRIO]
+    ```bashO
+    (https://github.com/Kaio-Andrade/login-system-1.git)
     ```
 2.  **Estrutura:** Garanta que a estrutura de diretórios (`/src`, `/tests`, `/database`) esteja correta.
 3.  **Execução:** O projeto é executado a partir do método `main` da classe `br.com.fecaf.App.java`.
