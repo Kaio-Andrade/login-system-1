@@ -23,10 +23,10 @@ Durante o desenvolvimento, simulamos uma alteração de requisito (Mudança de E
 | Área de Foco | Requisitos Chave | Status |
 | :--- | :--- | :--- |
 | **Código Base** | Cadastro (CREATE) e Login (READ) de Usuários com Serialização. | ✅ Concluído |
-| **Planejamento** | Quadro Kanban no GitHub Projects (Mínimo de 10 cards) e `README.md`. | ➡️ Em Andamento |
-| **Qualidade** | Implementação de Testes Automatizados (JUnit). | ⏳ A Fazer |
-| **Integração Contínua** | Configuração do Pipeline de CI/CD via GitHub Actions. | ⏳ A Fazer |
-| **Documentação** | Elaboração dos diagramas UML (Classes e Casos de Uso) e Documento Teórico. | ⏳ A Fazer |
+| **Planejamento** | Quadro Kanban no GitHub Projects (Mínimo de 10 cards) e `README.md`. |  ✅ Concluído|
+| **Qualidade** | Implementação de Testes Automatizados (JUnit). |  ✅ Concluído |
+| **Integração Contínua** | Configuração do Pipeline de CI/CD via GitHub Actions. |  ✅ Concluído|
+| **Documentação** | Elaboração dos diagramas UML (Classes e Casos de Uso) e Documento Teórico. |  ✅ Concluído |
 
 ### Tecnologias Utilizadas
 
