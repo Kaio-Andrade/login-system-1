@@ -92,12 +92,12 @@ O repositório contém um workflow GitHub Actions configurado para **compilar au
 ## 6. Diagramas UML
 
 ### 📘 Diagrama de Casos de Uso
-*(Inserir aqui a imagem gerada anteriormente – Ex: `docs/use_case_diagram.png`)*
+
 
 ### 📗 Diagrama de Classes
-*(Inserir aqui a imagem gerada anteriormente – Ex: `docs/class_diagram.png`)*
 
----
+
+
 
 ## 7. Créditos e Autoria
 Desenvolvido por **Kaio**, estudante de Engenharia da Computação, como parte de um projeto acadêmico voltado à prática de **Engenharia de Software, Metodologias Ágeis e Modelagem UML**.
