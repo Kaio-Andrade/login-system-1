@@ -87,7 +87,7 @@ br.com.fecaf.App
 ### 🧪 Testes Automatizados
 O repositório contém um workflow GitHub Actions configurado para **compilar automaticamente o projeto** e verificar erros de sintaxe sempre que há um *push* ou *pull request* na branch `main`.
 
----
+--
 
 ## 6. Diagramas UML
 
